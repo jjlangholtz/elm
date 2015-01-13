@@ -1,3 +1,9 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<h2 id="title">Welcome to Elm</h2>
+
+<button {{action 'createAction' on='click'}}>Create Action</button>
+
+{{#each action in model}}
+  <li class="action">Action</li>
+{{/each}}
 
 {{outlet}}
