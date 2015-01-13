@@ -18,4 +18,10 @@ test('Create an action', function() {
   andThen(function() {
     equal(find('.action').length, 1, 'An action is rendered');
   });
+
+  fillIn('input', 'Walk the dog');
+  keyEvent('input', 'keypress', 13);
+  andThen(function() {
+    equal(find('.action input').val(), 'Walk the dog', 'Text updated');
+  });
 });

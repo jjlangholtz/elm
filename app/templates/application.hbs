@@ -3,7 +3,9 @@
 <button {{action 'createAction' on='click'}}>Create Action</button>
 
 {{#each action in model}}
-  <li class="action">Action</li>
+  <li class="action">
+    {{input type='text' placeholder='untitled item' value=action.title}}
+  </li>
 {{/each}}
 
 {{outlet}}

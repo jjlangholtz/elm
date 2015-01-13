@@ -3,7 +3,8 @@ import Ember from 'ember';
 export default Ember.ArrayController.extend({
   actions: {
     createAction: function() {
-      this.store.createRecord('action', {} );
+      var record = this.store.createRecord('action', {} );
+      record.save();
     }
   }
 });
