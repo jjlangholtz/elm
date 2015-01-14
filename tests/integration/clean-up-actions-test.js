@@ -12,10 +12,10 @@ module('Integration', {
   }
 });
 
-test('Create an action', function() {
+test('Clean up actions', function() {
   visit('/');
-  click('button:contains("New Action")');
+  click('button:contains("Clean Up")');
   andThen(function() {
-    equal(find('.action').length, 1, 'An action is rendered');
+    equal(find('.action').length, 0, 'Clean all actions');
   });
 });

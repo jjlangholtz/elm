@@ -5,6 +5,10 @@ export default Ember.ArrayController.extend({
     createAction: function() {
       var record = this.store.createRecord('action', {} );
       record.save();
+    },
+
+    cleanUp: function() {
+
     }
   }
 });
