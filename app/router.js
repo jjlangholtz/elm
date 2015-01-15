@@ -6,6 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('inbox', { path: '/' });
+  this.route('forecast');
 });
 
 export default Router;
